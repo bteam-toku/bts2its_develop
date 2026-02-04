@@ -1,0 +1,22 @@
+# 設定・Git関連
+.git/
+.gitignore
+.dockerignore
+.vscode/
+
+# Python 実行・ビルド関連
+__pycache__/
+*.egg-info/
+dist/
+build/
+.venv/
+.test/
+.ruff_cache/
+.pytest_cache/
+
+# ログ・その他
+npm-debug.log
+*.log
+
+# カスタマイズ関連
+/src/bts2its/customizes/

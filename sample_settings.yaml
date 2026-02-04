@@ -1,0 +1,27 @@
+# -- Adapter指定 ---
+adapter_type_name: ""  # デフォルトアダプターを指定
+
+# --- パス設定 ---
+# プロジェクトルートディレクトリからの相対パスで指定。Docker環境では /data 以下にマウントされます。
+path_settings:
+  input_path: "input"
+  output_path: "output"
+
+# --- BTS設定 ---
+# BTSサーバーを直接操作せず、エクスポートしたCSVファイルを使用します。
+bts_settings:
+  url: "your_bts_url?id="
+  input_file: "bts.csv"
+
+# --- ITS設定 ---
+its_settings:
+# ITSサーバーを直接操作せず、エクスポートしたCSVファイルを使用します。
+  url: "your_its_url"
+  api_key: "your_api_key"
+  input_file: "its.csv"
+
+# --- 変換設定 ---
+# 変換対象の期間（日数）は、マイナス値を指定すると全期間が対象となります。
+conversion_settings:
+  output_file: output.csv
+  date_range: -1

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bts2its"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas",
+    "python-redmine",
+    "pyyaml>=6.0.3",
+    "bteam_utils @ git+https://github.com/bteam-toku/bteam_utils.git",
+    "its-accessor",
+]
+
+[project.scripts]
+bts2its = "bts2its.__main__:main"
+execute = "bts2its.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = { find = { where = ["src"] } }
+
+[tool.uv.sources]
+its-accessor = { git = "https://github.com/bteam-toku/its_accessor.git" }

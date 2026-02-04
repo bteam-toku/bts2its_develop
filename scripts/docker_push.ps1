@@ -1,0 +1,1 @@
+docker push ghcr.io/bteam-toku/bts2its:latest

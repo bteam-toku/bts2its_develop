@@ -1,0 +1,10 @@
+services:
+  bts2its:
+    build: .
+    image: ghcr.io/bteam-toku/bts2its:latest
+    container_name: bts2its_container
+    environment:
+      - IS_DOCKER=true
+    volumes:
+      - .:/data
+      - ./customizes:/app/src/mantis2redmine/customizes
